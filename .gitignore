@@ -1,0 +1,14 @@
+# Ignorar pastas de ambiente virtual
+venv/
+.env
+
+# Ignorar arquivos de dados brutos e modelos grandes
+data/raw/
+models/random_forest_enchente.pkl
+models/features_cols.pkl
+
+# Ignorar arquivos de logs
+*.log
+
+# Ignorar arquivos específicos do VS Code
+.vscode/
