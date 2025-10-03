@@ -1,4 +1,4 @@
-# 🌧️ MVP - Previsão de Enchentes Suzano (Palmeiras)
+# 🌧️ MVP - Previsão de Enchentes Francisco Morato
 
 Este projeto é um **MVP de previsão de risco de enchentes/alagamentos** usando dados de chuva do **CEMADEN** e alagamento/enchentes do **S2id/MDR** , aprendizado de máquina e visualização via **Streamlit**.
 
