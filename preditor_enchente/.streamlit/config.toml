@@ -1,0 +1,7 @@
+[theme]
+base="light"
+primaryColor="#FF4B4B"    # cor primária, opcional
+backgroundColor="#ffffff"  # fundo
+secondaryBackgroundColor="#F0F2F6"  # fundo de painéis
+textColor="#31333F"        # cor do texto
+font="sans serif"          # fonte
