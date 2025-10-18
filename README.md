@@ -139,8 +139,37 @@ A interface é simples e intuitiva:
 | `features_cols.joblib` | Lista na ordem correta das *features* (colunas) que o modelo espera receber. **A ordem é vital.** |
 
 -----
+## 8\.🔑 Configuração da Chave de API
+O aplicativo requer uma chave de API do OpenWeatherMap para coletar dados meteorológicos.
 
-## 8\. Desenvolvimento e Contribuição
+Para rodar o projeto, você precisa configurar o arquivo de segredos do Streamlit:
+
+1. Obter a Chave
+Crie uma conta no OpenWeatherMap.
+
+Gere e copie sua chave de API na seção "API keys" do seu painel de usuário.
+
+2. Criar o Arquivo de Segredos
+Crie o arquivo secrets.toml dentro da pasta .streamlit/ na raiz do seu projeto.
+
+preditor_enchente/
+└── .streamlit/
+    └── secrets.toml  <-- CRIE ESTE
+3. Inserir a Chave
+Cole sua chave de API dentro do arquivo secrets.toml no formato TOML (usando aspas duplas):
+
+Ini, TOML
+
+[api]
+chave_tempo = "SUA_CHAVE_DE_API_AQUI"
+Após este passo, o aplicativo estará pronto para ser executado:
+
+Bash
+
+streamlit run preditor_enchente/apps.py
+-----
+
+## 9\. Desenvolvimento e Contribuição
 
 Este projeto foi desenvolvido como **Projeto Integrador IV**. Sugestões de melhoria são bem-vindas\!
 
