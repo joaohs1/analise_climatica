@@ -2,7 +2,7 @@
 # 1. SEGURANÇA (CRÍTICO)
 # Não enviar arquivos de credenciais.
 # ------------------------------------
-.streamlit/secrets.toml
+preditor_enchente/.streamlit/secrets.toml
 # .env # Se você usar variáveis de ambiente em um arquivo .env
 
 # ------------------------------------
