@@ -67,6 +67,7 @@ O repositório está organizado da seguinte forma:
 
 ```
 .
+preditor_enchente/
 ├── apps.py                 # Aplicação principal Streamlit
 ├── api_data_collector.py   # Módulo para coleta e processamento dos dados da API (Assumido)
 ├── style.css               # Arquivo CSS para estilização da interface
@@ -151,22 +152,26 @@ Gere e copie sua chave de API na seção "API keys" do seu painel de usuário.
 
 2. Criar o Arquivo de Segredos
 Crie o arquivo secrets.toml dentro da pasta .streamlit/ na raiz do seu projeto.
-
+```
+.
 preditor_enchente/
 └── .streamlit/
     └── secrets.toml  <-- CRIE ESTE
 3. Inserir a Chave
 Cole sua chave de API dentro do arquivo secrets.toml no formato TOML (usando aspas duplas):
 
-Ini, TOML
 
+```
+Ini, TOML
 [api]
 chave_tempo = "SUA_CHAVE_DE_API_AQUI"
 Após este passo, o aplicativo estará pronto para ser executado:
+```
 
-Bash
+```bash
 
 streamlit run preditor_enchente/apps.py
+```
 -----
 
 ## 9\. Desenvolvimento e Contribuição
