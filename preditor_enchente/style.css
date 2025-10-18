@@ -1,0 +1,95 @@
+/* --- CONFIGURAÇÃO GERAL --- */
+.stApp {
+    background-color: #4898ef; /* Fundo azul - claro (Mantido do app.py) */
+}
+
+/* --- ESTILOS GERAIS DE STREAMLIT --- */
+/* Alinha o título principal no centro para melhor estética */
+.stApp > header {
+    background-color: transparent;
+}
+
+/* Garante que o container principal esteja centralizado */
+.css-1ht1j8s { /* A classe pode mudar, mas visa o container central */
+    padding-top: 2rem;
+}
+
+/* Estilo para o botão de ação principal */
+.stButton>button {
+    width: 100%;
+    border-radius: 10px;
+    height: 3.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #1e3a8a; /* Azul escuro forte */
+    border: none;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.stButton>button:hover {
+    background-color: #274bba;
+    transform: translateY(-2px);
+}
+
+
+/* --- GRID E CARDS DE TEMPO --- */
+
+/* Contêiner do Grid */
+.weather-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Estilo geral dos cards */
+.weather-card {
+    background: linear-gradient(145deg, #5a8dee, #7b9df7);
+    border-radius: 20px;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.weather-card:hover {
+    transform: scale(1.03); /* Levemente menor para não exagerar */
+}
+
+/* Card especial: Temperatura Atual */
+.weather-card.main {
+    background: linear-gradient(145deg, #1e3a8a, #274bba); /* Azul escuro */
+    grid-column: span 2; /* Ocupa mais espaço */
+    font-size: 1.1em;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.weather-card h2 {
+    font-size: 1.6em;
+    margin: 0;
+}
+
+.weather-card p {
+    margin: 5px 0;
+    font-size: 0.95em;
+    font-weight: 500;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .weather-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+    .weather-card.main {
+        grid-column: span 1;
+    }
+    .weather-card h2 {
+        font-size: 1.3em;
+    }
+    .weather-card p {
+        font-size: 0.85em;
+    }
+}

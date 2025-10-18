@@ -1,14 +1,61 @@
-# Ignorar pastas de ambiente virtual
+# ------------------------------------
+# 1. SEGURANÇA (CRÍTICO)
+# Não enviar arquivos de credenciais.
+# ------------------------------------
+.streamlit/secrets.toml
+# .env # Se você usar variáveis de ambiente em um arquivo .env
+
+# ------------------------------------
+# 2. MACHINE LEARNING (Modelos Grandes e Dados)
+# Arquivos que são muito grandes ou que podem ser recriados.
+# ------------------------------------
+# Modelos salvos (.joblib, .pkl, .h5, etc.)
+#*.joblib
+#*.pkl
+#*.h5
+#*.model
+# Dados de treino/teste (se forem muito grandes ou confidenciais)
+#data/
+#datasets/
+#input_data/
+#output_data/
+
+# ------------------------------------
+# 3. PYTHON (Arquivos temporários e de compilação)
+# ------------------------------------
+# Arquivos de bytecode compilado
+__pycache__/
+*.pyc
+*.pyo
+
+# Ambientes virtuais
 venv/
-.env
+.venv/
+env/
+.env/
 
-# Ignorar arquivos de dados brutos e modelos grandes
-data/raw/
-models/random_forest_enchente.pkl
-models/features_cols.pkl
-
-# Ignorar arquivos de logs
+# Logs e arquivos de depuração
 *.log
+tmp/
+temp/
 
-# Ignorar arquivos específicos do VS Code
+# ------------------------------------
+# 4. STREAMLIT (Arquivos de cache gerados)
+# ------------------------------------
+# Streamlit guarda o cache em .streamlit/
+.streamlit/cache/
+
+# ------------------------------------
+# 5. EDITOR/SISTEMA OPERACIONAL (Arquivos específicos de IDEs)
+# ------------------------------------
+# Visual Studio Code
 .vscode/
+
+# PyCharm/IntelliJ
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
