@@ -11,13 +11,19 @@ NOME_DO_MODELO = 'modelo_enchente_final_xgb.joblib'
 NOME_FEATURES = 'features_cols.joblib'
 #LAT = -23.29  # Francisco Morato
 
+# ✅ Caminho absoluto baseado no diretório atual do script
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+CAMINHO_MODELO = os.path.join(BASE_DIR, NOME_DO_MODELO)
+CAMINHO_FEATURES = os.path.join(BASE_DIR, NOME_FEATURES)
+
+
 # --- 1. Carregar Modelo e Features ---
 @st.cache_resource
 def load_resources():
     """Carrega o modelo e a lista de features."""
     try:
-        model = joblib.load(NOME_DO_MODELO)
-        feature_cols = joblib.load(NOME_FEATURES)
+        model = joblib.load(CAMINHO_MODELO)
+        feature_cols = joblib.load(CAMINHO_FEATURES)
         return model, feature_cols
     except FileNotFoundError:
         st.error(f"❌ Arquivo do modelo ou das features não encontrado.\nVerifique se '{NOME_DO_MODELO}' e '{NOME_FEATURES}' estão na pasta correta.")
