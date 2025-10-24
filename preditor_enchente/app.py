@@ -2,7 +2,7 @@ import streamlit as st
 import joblib
 import pandas as pd
 import numpy as np
-
+import os
 # Importa função de coleta de dados
 from api_data_collector import get_real_time_features, LAT_FM, LON_FM
 # --- CONFIGURAÇÕES ---
